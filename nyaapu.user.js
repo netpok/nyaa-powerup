@@ -16,3 +16,5 @@ $("#tabnav").find("li:nth(6)").find("a").click(function (e) {
     e.preventDefault();
     prompt("RSS URL:", this.href);
 });
+
+$("#main").find("div[class!='content']").remove()
