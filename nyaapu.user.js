@@ -31,10 +31,10 @@
     $("head").append('<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">');
     $("body").append('<div id="dialog" title="Basic dialog" style="display: none;">' +
         '<form id="dlForm"><input type="hidden" id="dlUrl">' +
-        'Type: <label><input type="radio" name="dlType" class="dlType" value="tv.shows.2ln" checked="checked">Anime</label>' +
+        'Type: <label><input type="radio" name="dlType" class="dlType" value="tv.shows.2link" checked="checked">Anime</label>' +
         '<label><input type="radio" name="dlType" class="dlType" value="movies">Anime movie</label><br>' +
         '<label>Location: <span id="locationBase"><span id="mediaLocation"></span>/' +
-        '<span id="typeLocation">tv.shows.2ln</span>/</span>' +
+        '<span id="typeLocation">tv.shows.2link</span>/</span>' +
         '<input type="text" id="location" required="required" value="' + defaultLocation + '"></label><br>' +
         '<label>Label: <input id="label" value="Anime"></label><br>' +
         '<label>Apply for all: <input type="checkbox" id="applyForAll"></label></form></div>');
