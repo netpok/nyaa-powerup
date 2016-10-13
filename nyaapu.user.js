@@ -7,7 +7,7 @@
 // @match        http://www.nyaa.se/*
 // @match        https://www.nyaa.se/*
 // @require      https://code.jquery.com/jquery-3.1.1.min.js
-// @require      https://code.jquery.com/ui/1.12.1/jquery-ui.js
+// @require      https://code.jquery.com/ui/1.12.1/jquery-ui.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js
 // @grant        GM_addStyle
@@ -28,7 +28,7 @@
     if (!defaultLocation) {
         defaultLocation = '';
     }
-    $("head").append('<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">');
+    $("head").append('<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">');
     $("body").append('<div id="dialog" title="Basic dialog" style="display: none;">' +
         '<form id="dlForm"><input type="hidden" id="dlUrl">' +
         'Type: <label><input type="radio" name="dlType" class="dlType" value="tv.shows.2link" checked="checked">Anime</label>' +
