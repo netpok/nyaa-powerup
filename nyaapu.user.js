@@ -67,7 +67,7 @@
     });
 
     function sendToqB(url) {
-        data = new FormData();
+        var data = new FormData();
         data.append('urls', url);
         data.append('savepath', $("#locationBase").text() + $("#location").val());
         data.append('label', $("#label").val());
