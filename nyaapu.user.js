@@ -22,7 +22,7 @@
         prompt("RSS URL:", this.href);
     });
 
-    $("#main").find("div[class!='content']").remove();
+    $("#main").find(">div:not(.content)").remove();
 
     var defaultLocation = $.url().param("location");
     if (!defaultLocation) {
