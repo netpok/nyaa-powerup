@@ -37,8 +37,7 @@
         '<span id="typeLocation">tv.shows.2ln</span>/</span>' +
         '<input type="text" id="location" required="required" value="' + defaultLocation + '"></label><br>' +
         '<label>Label: <input id="label" value="Anime"></label><br>' +
-        '<label>Apply for all: <input type="checkbox" id="applyForAll"></label><br>' +
-        '<button type="submit">Start download</button></form></div>');
+        '<label>Apply for all: <input type="checkbox" id="applyForAll"></label></form></div>');
     GM_addStyle(".qbHead{width: 20px;} .qbDownload{filter: hue-rotate(75deg);}");
     $(".tlistththree").before('<th class="qbHead">qB</th>');
     $(".tlistdownload").before('<td class="qbDownload"><a href="#"><img src="//files.nyaa.se/www-7.png" alt="Add to qBittorrent"></a></td>');
@@ -51,15 +50,16 @@
         } else {
             $("#dlUrl").val(url);
             $("#mediaLocation").text("/mnt/data/media");
-            $("#dialog").dialog();
+            $("#dialog").dialog({
+                buttons: {
+                    "Start download": function () {
+                        sendToqB($("#dlUrl").val());
+                        $("#dialog").dialog("close");
+                    }
+                }
+            });
             $("#location").focus();
         }
-    });
-
-    $("#dlForm").submit(function (e) {
-        e.preventDefault();
-        sendToqB($("#dlUrl").val());
-        $("#dialog").dialog("close");
     });
 
     $(".dlType").click(function (e) {
