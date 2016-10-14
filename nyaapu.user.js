@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Nyaa PowerUP
 // @namespace    https://github.com/netpok/nyaa-powerup
-// @version      0.1
+// @version      0.2
 // @description  Add qBittorrent links, RSS prompt & remove ads
 // @author       netpok
 // @match        http://www.nyaa.se/*
@@ -29,7 +29,7 @@
         defaultLocation = '';
     }
     $("head").append('<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">');
-    $("body").append('<div id="dialog" title="Basic dialog" style="display: none;">' +
+    $("body").append('<div id="dialog" title="Add to qBittorrent" style="display: none;">' +
         '<form id="dlForm"><input type="hidden" id="dlUrl">' +
         'Type: <label><input type="radio" name="dlType" class="dlType" value="tv.shows.2link" checked="checked">Anime</label>' +
         '<label><input type="radio" name="dlType" class="dlType" value="movies">Anime movie</label><br>' +
